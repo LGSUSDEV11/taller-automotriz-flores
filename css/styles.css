@@ -1,4 +1,10 @@
-/* Estilos generales */
+:root {
+  --primary-color: #b51a28;
+  --secondary-color: #ffeb3b;
+  --text-color: #282f32;
+  --background-color: #f5f5f5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +12,8 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #0e0d0d;
-  background-color: #6c6a68;
-  margin: 0 auto;
-  padding: 0;
+  background-color: var(--background-color);
+  font-family: "Arial", sans-serif;
 }
 
 main {
@@ -20,47 +22,28 @@ main {
   padding: 20px;
 }
 
-/* Estilos para el header y navegación */
-header {
-  background-color: #b51a28;
+#top-nav {
+  background-color: var(--primary-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
-  z-index: 100;
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
+#top-nav-logo {
+  width: 6rem;
+  transition: transform 300ms ease;
 }
 
-.logo-img {
-  height: 60px;
-  width: auto;
-  border-radius: 5px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  /* Eliminado el fondo blanco */
-  /* background-color: rgba(255, 255, 255, 0.1); */
-  /* Eliminado el padding */
-  /* padding: 5px; */
-}
-
-.logo-img:hover {
+#top-nav-logo:hover {
   transform: scale(1.05);
 }
 
-.nav-menu {
+#top-nav-menu {
   display: flex;
   list-style: none;
   margin: 0;
@@ -74,7 +57,7 @@ header {
 
 .nav-link {
   color: rgb(254, 254, 254);
-  text-decoration: none; 
+  text-decoration: none;
   font-weight: bold;
   font-size: 16px;
   transition: color 0.3s ease;
@@ -182,19 +165,19 @@ li:not(.nav-item) {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  
+
   main {
     padding: 10px;
   }
-  
+
   h1 {
     font-size: 24px;
   }
-  
+
   h2 {
     font-size: 20px;
   }
-  
+
   p {
     font-size: 18px;
     color: white;
@@ -223,7 +206,8 @@ li:not(.nav-item) {
   margin: 0;
 }
 
-.login-btn, .register-btn {
+.login-btn,
+.register-btn {
   padding: 8px 15px;
   border: none;
   border-radius: 4px;
@@ -253,7 +237,7 @@ li:not(.nav-item) {
   color: #b51a28;
 }
 
-
+/* Ajustes responsivos para los botones de autenticación */
 @media (max-width: 768px) {
   .auth-buttons {
     position: fixed;
@@ -265,13 +249,14 @@ li:not(.nav-item) {
     justify-content: center;
     z-index: 99;
   }
-  
-  .login-btn, .register-btn {
+
+  .login-btn,
+  .register-btn {
     width: 45%;
   }
 }
 
-
+/* Estilos para formularios */
 .form-container {
   max-width: 500px;
   margin: 0 auto;
@@ -332,7 +317,9 @@ li:not(.nav-item) {
   text-decoration: underline;
 }
 
-.profile-btn, .logout-btn {
+/* Estilos para botones de perfil y cerrar sesión */
+.profile-btn,
+.logout-btn {
   padding: 8px 15px;
   border: none;
   border-radius: 4px;
