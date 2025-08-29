@@ -1,41 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taller de pintura y restauración automotriz Flores</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="img/logo_32x32.ico">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="img/logo.jpeg" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <img src="img/Logo_Taller_sin_fondo.jpeg" alt="Logo Taller Flores" class="logo-img">
-        </div>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="#inicio" class="nav-link" data-section="inicio">Inicio</a></li>
-          <li class="nav-item"><a href="#cotizacion" class="nav-link" data-section="cotizacion">Cotización</a></li>
-          <li class="nav-item"><a href="#proyectos" class="nav-link" data-section="proyectos">Proyectos Realizados</a></li>
-          <li class="nav-item"><a href="#nosotros" class="nav-link" data-section="nosotros">Acerca de Nosotros</a></li>
-          <li class="nav-item"><a href="#contacto" class="nav-link" data-section="contacto">Contáctanos</a></li>
-        </ul>
-        <div class="auth-buttons">
-          <button class="login-btn">Iniciar Sesión</button>
-          <button class="register-btn">Registrarse</button>
-        </div>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </header>
+    <!-- La etiqueta header se usa para banners, no para navegación -->
+    <nav id="top-nav">
+      <a href="/">
+        <img id="top-nav-logo" src="img/logo.webp" alt="Logo Taller Flores" />
+      </a>
+
+      <ul id="top-nav-menu">
+        <li class="nav-item">
+          <a href="#inicio" class="nav-link" data-section="inicio">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#cotizacion" class="nav-link" data-section="cotizacion"
+            >Cotización</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#proyectos" class="nav-link" data-section="proyectos"
+            >Proyectos Realizados</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#nosotros" class="nav-link" data-section="nosotros"
+            >Acerca de Nosotros</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#contacto" class="nav-link" data-section="contacto"
+            >Contáctenos</a
+          >
+        </li>
+      </ul>
+      <div class="auth-buttons">
+        <button class="login-btn">Iniciar Sesión</button>
+        <button class="register-btn">Registrarse</button>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
 
     <main>
       <section id="inicio" class="page-section active">
         <h1>Taller de pintura y restauración automotriz Flores</h1>
-        
+
         <div>
           <h2>Nuestros servicios:</h2>
           <ul>
@@ -43,86 +61,101 @@
             <li>Autodetallado</li>
             <li>Restauración de automóviles</li>
           </ul>
-          <p>Ofrecemos una amplia gama de servicios de pintura y restauración automotriz, 
-             incluyendo pintura de carros, motos, y camiones. Nuestro equipo está comprometido con la calidad y la satisfacción del cliente.
-             Garantizamos desde el más pequeño detalle hasta la más completa restauración de tu automóvil.</p>
+          <p>
+            Ofrecemos una amplia gama de servicios de pintura y restauración
+            automotriz, incluyendo pintura de carros, motos, y camiones. Nuestro
+            equipo está comprometido con la calidad y la satisfacción del
+            cliente. Garantizamos desde el más pequeño detalle hasta la más
+            completa restauración de tu automóvil.
+          </p>
         </div>
-        
       </section>
 
       <section id="nosotros" class="page-section">
         <h2>Sobre nosotros:</h2>
         <p>
           Somos un taller de pintura y restauración automotriz, donde brindamos
-          servicios de pintura y restauración de automóviles de la mas alta calidad. Enfocandonos 
-          en la satisfacción del cliente y la excelencia en el trabajo, nos aseguramos de que cada
-          automóvil que nos contacte esté en las mejores condiciones posibles.
+          servicios de pintura y restauración de automóviles de la mas alta
+          calidad. Enfocandonos en la satisfacción del cliente y la excelencia
+          en el trabajo, nos aseguramos de que cada automóvil que nos contacte
+          esté en las mejores condiciones posibles.
         </p>
       </section>
 
       <section id="cotizacion" class="page-section">
         <h2>Solicita una cotización</h2>
-        <p>Completa el formulario a continuación, añade fotos y vídeos de tu automóvil y danos una descripción acerca de tu proyecto y tus necesidades para solicitar una cotización personalizada. (recuerda que entre más fotos y vídeos, ¡Más exacta será tu cotización!)
-           Nuestro equipo se pondrá en contacto contigo lo más pronto posible para discutir los detalles de tu proyecto.</p>
+        <p>
+          Completa el formulario a continuación, añade fotos y vídeos de tu
+          automóvil y danos una descripción acerca de tu proyecto y tus
+          necesidades para solicitar una cotización personalizada. (recuerda que
+          entre más fotos y vídeos, ¡Más exacta será tu cotización!) Nuestro
+          equipo se pondrá en contacto contigo lo más pronto posible para
+          discutir los detalles de tu proyecto.
+        </p>
 
         <!-- Aquí puedes añadir un formulario de cotización en el futuro -->
       </section>
 
       <section id="proyectos" class="page-section">
         <h2>Proyectos Realizados</h2>
-        <p>Conoce algunos de nuestros trabajos más destacados.
-           Aquí encontrarás una galería de proyectos realizados, incluyendo imágenes y videos de nuestros trabajos. 
+        <p>
+          Conoce algunos de nuestros trabajos más destacados. Aquí encontrarás
+          una galería de proyectos realizados, incluyendo imágenes y videos de
+          nuestros trabajos.
         </p>
       </section>
 
       <section id="contacto" class="page-section">
         <h2>Contáctanos</h2>
-        <p>Estamos ubicados en [dirección]. Puedes comunicarte con nosotros al [teléfono] o enviarnos un correo a pintura_restauracion_flores@gmail.com.</p>
-        
+        <p>
+          Estamos ubicados en [dirección]. Puedes comunicarte con nosotros al
+          [teléfono] o enviarnos un correo a
+          pintura_restauracion_flores@gmail.com.
+        </p>
       </section>
     </main>
-    
+
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         // Menú hamburguesa
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        hamburger.addEventListener('click', function() {
-          hamburger.classList.toggle('active');
-          navMenu.classList.toggle('active');
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", function () {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
         });
-        
+
         // Navegación entre secciones
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('.page-section');
-        
+        const navLinks = document.querySelectorAll(".nav-link");
+        const sections = document.querySelectorAll(".page-section");
+
         // Mostrar solo la sección inicial al cargar
-        sections.forEach(section => {
-          if (section.id !== 'inicio') {
-            section.style.display = 'none';
+        sections.forEach((section) => {
+          if (section.id !== "inicio") {
+            section.style.display = "none";
           }
         });
-        
-        navLinks.forEach(link => {
-          link.addEventListener('click', function(e) {
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
             e.preventDefault();
-            
+
             // Ocultar todas las secciones
-            sections.forEach(section => {
-              section.style.display = 'none';
+            sections.forEach((section) => {
+              section.style.display = "none";
             });
-            
+
             // Mostrar la sección correspondiente
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = this.getAttribute("href").substring(1);
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
-              targetSection.style.display = 'block';
+              targetSection.style.display = "block";
             }
-            
+
             // Cerrar menú hamburguesa si está abierto
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
           });
         });
       });
@@ -141,49 +174,60 @@
         <form id="login-form">
           <div class="form-group">
             <label for="login-email">Correo electrónico:</label>
-            <input type="email" id="login-email" required>
+            <input type="email" id="login-email" required />
           </div>
           <div class="form-group">
             <label for="login-password">Contraseña:</label>
-            <input type="password" id="login-password" required>
+            <input type="password" id="login-password" required />
           </div>
           <button type="submit" class="submit-btn">Iniciar Sesión</button>
-          <p class="form-switch">¿No tienes cuenta? <a href="#register" class="nav-link" data-section="register">Regístrate aquí</a></p>
+          <p class="form-switch">
+            ¿No tienes cuenta?
+            <a href="#register" class="nav-link" data-section="register"
+              >Regístrate aquí</a
+            >
+          </p>
         </form>
       </div>
     </section>
-    
+
     <section id="register" class="page-section">
       <h2>Registro de Usuario</h2>
       <div class="form-container">
         <form id="register-form">
           <div class="form-group">
             <label for="register-nombre">Nombre:</label>
-            <input type="text" id="register-nombre" required>
+            <input type="text" id="register-nombre" required />
           </div>
           <div class="form-group">
             <label for="register-apellido">Apellido:</label>
-            <input type="text" id="register-apellido" required>
+            <input type="text" id="register-apellido" required />
           </div>
           <div class="form-group">
             <label for="register-email">Correo electrónico:</label>
-            <input type="email" id="register-email" required>
+            <input type="email" id="register-email" required />
           </div>
           <div class="form-group">
             <label for="register-telefono">Teléfono:</label>
-            <input type="tel" id="register-telefono">
+            <input type="tel" id="register-telefono" />
           </div>
           <div class="form-group">
             <label for="register-password">Contraseña:</label>
-            <input type="password" id="register-password" required>
+            <input type="password" id="register-password" required />
           </div>
           <div class="form-group">
             <label for="register-confirm-password">Confirmar contraseña:</label>
-            <input type="password" id="register-confirm-password" required>
+            <input type="password" id="register-confirm-password" required />
           </div>
           <button type="submit" class="submit-btn">Registrarse</button>
-          <p class="form-switch">¿Ya tienes cuenta? <a href="#login" class="nav-link" data-section="login">Inicia sesión aquí</a></p>
+          <p class="form-switch">
+            ¿Ya tienes cuenta?
+            <a href="#login" class="nav-link" data-section="login"
+              >Inicia sesión aquí</a
+            >
+          </p>
         </form>
       </div>
     </section>
+  </body>
 </html>
