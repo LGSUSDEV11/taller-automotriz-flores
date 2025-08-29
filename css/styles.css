@@ -1,0 +1,362 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #0e0d0d;
+  background-color: #6c6a68;
+  margin: 0 auto;
+  padding: 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para el header y navegación */
+header {
+  background-color: #b51a28;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Eliminado el fondo blanco */
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  /* Eliminado el padding */
+  /* padding: 5px; */
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 15px;
+  padding: 0;
+}
+
+.nav-link {
+  color: rgb(254, 254, 254);
+  text-decoration: none; 
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffeb3b;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: rgb(3, 3, 3);
+  transition: all 0.3s ease;
+}
+
+/* Encabezados */
+h1 {
+  color: #7d1416;
+  text-align: center;
+  margin: 30px 0;
+  padding-bottom: 15px;
+  border-bottom: 7px solid #7d1416;
+}
+
+h2 {
+  color: #282f32;
+  margin: 25px 0 15px 0;
+}
+
+/* Párrafos */
+p {
+  margin-bottom: 20px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+/* Contenedores */
+div {
+  background-color: rgb(211, 205, 205);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgb(4, 4, 4);
+  margin-bottom: 30px;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 40px;
+}
+
+/* Listas */
+ul:not(.nav-menu) {
+  list-style-position: inside;
+  margin-left: 20px;
+}
+
+li:not(.nav-item) {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #d32f2f;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  main {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: white;
+  }
+}
+
+/* Añade esto al final de tu archivo CSS */
+
+/* Estilos para las secciones de página */
+.page-section {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.page-section:not(.active) {
+  display: none;
+}
+
+/* Estilos para los botones de autenticación */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.login-btn, .register-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.login-btn:hover {
+  background-color: white;
+  color: #b51a28;
+}
+
+.register-btn {
+  background-color: white;
+  color: #b51a28;
+}
+
+.register-btn:hover {
+  background-color: #ffeb3b;
+  color: #b51a28;
+}
+
+
+@media (max-width: 768px) {
+  .auth-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #b51a28;
+    padding: 10px;
+    justify-content: center;
+    z-index: 99;
+  }
+  
+  .login-btn, .register-btn {
+    width: 45%;
+  }
+}
+
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.submit-btn {
+  background-color: #b51a28;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #8e1520;
+}
+
+.form-switch {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.form-switch a {
+  color: #b51a28;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-switch a:hover {
+  text-decoration: underline;
+}
+
+.profile-btn, .logout-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-btn {
+  background-color: white;
+  color: #b51a28;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.profile-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
