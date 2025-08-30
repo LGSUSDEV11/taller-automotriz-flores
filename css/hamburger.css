@@ -1,0 +1,37 @@
+.hamburger {
+  display: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+.hamburger > .bar {
+  background-color: #fff;
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+  }
+}

@@ -1,7 +1,5 @@
 :root {
   --primary-color: #b51a28;
-  --secondary-color: #ffeb3b;
-  --text-color: #282f32;
   --background-color: #f5f5f5;
 }
 
@@ -11,79 +9,28 @@
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
 body {
   background-color: var(--background-color);
   font-family: "Arial", sans-serif;
 }
 
-main {
+.container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-#top-nav {
-  background-color: var(--primary-color);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px 20px;
   margin: 0 auto;
 }
 
-#top-nav-logo {
-  width: 6rem;
-  transition: transform 300ms ease;
-}
-
-#top-nav-logo:hover {
-  transform: scale(1.05);
-}
-
-#top-nav-menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-item {
-  margin: 0 15px;
-  padding: 0;
-}
-
-.nav-link {
-  color: rgb(254, 254, 254);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #ffeb3b;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  background-color: rgb(3, 3, 3);
-  transition: all 0.3s ease;
-}
-
-/* Encabezados */
 h1 {
-  color: #7d1416;
+  color: var(--primary-color);
   text-align: center;
   margin: 30px 0;
   padding-bottom: 15px;
@@ -95,97 +42,6 @@ h2 {
   margin: 25px 0 15px 0;
 }
 
-/* Párrafos */
-p {
-  margin-bottom: 20px;
-  text-align: justify;
-  font-size: 16px;
-}
-
-/* Contenedores */
-div {
-  background-color: rgb(211, 205, 205);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgb(4, 4, 4);
-  margin-bottom: 30px;
-}
-
-/* Secciones */
-section {
-  margin-bottom: 40px;
-}
-
-/* Listas */
-ul:not(.nav-menu) {
-  list-style-position: inside;
-  margin-left: 20px;
-}
-
-li:not(.nav-item) {
-  margin-bottom: 10px;
-  padding-left: 10px;
-}
-
-/* Diseño responsivo */
-@media (max-width: 768px) {
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    flex-direction: column;
-    background-color: #d32f2f;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-
-  .nav-item {
-    margin: 10px 0;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  main {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 18px;
-    color: white;
-  }
-}
-
-/* Añade esto al final de tu archivo CSS */
-
 /* Estilos para las secciones de página */
 .page-section {
   opacity: 1;
@@ -196,7 +52,6 @@ li:not(.nav-item) {
   display: none;
 }
 
-/* Estilos para los botones de autenticación */
 .auth-buttons {
   display: flex;
   gap: 10px;
@@ -237,7 +92,6 @@ li:not(.nav-item) {
   color: #b51a28;
 }
 
-/* Ajustes responsivos para los botones de autenticación */
 @media (max-width: 768px) {
   .auth-buttons {
     position: fixed;

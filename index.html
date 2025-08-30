@@ -3,54 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taller de pintura y restauración automotriz Flores</title>
+    <title>Taller de Pintura y Restauración Automotriz Flores</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" type="image/png" href="img/logo.jpeg" />
+    <link rel="stylesheet" href="css/top-nav.css" />
+    <link rel="stylesheet" href="css/hamburger.css" />
+    <link rel="icon" type="image/png" href="img/logo.webp" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
   </head>
   <body>
-    <!-- La etiqueta header se usa para banners, no para navegación -->
     <nav id="top-nav">
-      <a href="/">
-        <img id="top-nav-logo" src="img/logo.webp" alt="Logo Taller Flores" />
-      </a>
+      <div class="container">
+        <a href="/">
+          <img id="top-nav-logo" src="img/logo.webp" alt="Logo Taller Flores" />
+        </a>
 
-      <ul id="top-nav-menu">
-        <li class="nav-item">
-          <a href="#inicio" class="nav-link" data-section="inicio">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a href="#cotizacion" class="nav-link" data-section="cotizacion"
-            >Cotización</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#proyectos" class="nav-link" data-section="proyectos"
-            >Proyectos Realizados</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#nosotros" class="nav-link" data-section="nosotros"
-            >Acerca de Nosotros</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#contacto" class="nav-link" data-section="contacto"
-            >Contáctenos</a
-          >
-        </li>
-      </ul>
-      <div class="auth-buttons">
-        <button class="login-btn">Iniciar Sesión</button>
-        <button class="register-btn">Registrarse</button>
-      </div>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+        <ul id="top-nav-menu">
+          <li>
+            <a href="/">Inicio</a>
+          </li>
+          <li>
+            <a href="/budget.html">Cotización</a>
+          </li>
+          <li>
+            <a href="/projects.html">Proyectos</a>
+          </li>
+          <li>
+            <a href="/about.html">Acerca de</a>
+          </li>
+          <li>
+            <a href="/contact.html">Contáctenos</a>
+          </li>
+        </ul>
+
+        <ul id="top-nav-buttons">
+          <li>
+            <a id="login-btn" href="/login.html">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </a>
+          </li>
+          <li>
+            <div
+              id="top-nav-hamburger"
+              class="hamburger"
+              role="button"
+              tabindex="0"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <main>
+    <main class="container">
       <section id="inicio" class="page-section active">
         <h1>Taller de pintura y restauración automotriz Flores</h1>
 
@@ -58,7 +68,7 @@
           <h2>Nuestros servicios:</h2>
           <ul>
             <li>Pintura de automóviles</li>
-            <li>Autodetallado</li>
+            <li>Auto detallado</li>
             <li>Restauración de automóviles</li>
           </ul>
           <p>
@@ -106,7 +116,7 @@
       </section>
 
       <section id="contacto" class="page-section">
-        <h2>Contáctanos</h2>
+        <h2>Contáctenos</h2>
         <p>
           Estamos ubicados en [dirección]. Puedes comunicarte con nosotros al
           [teléfono] o enviarnos un correo a
@@ -115,119 +125,7 @@
       </section>
     </main>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Menú hamburguesa
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
-
-        hamburger.addEventListener("click", function () {
-          hamburger.classList.toggle("active");
-          navMenu.classList.toggle("active");
-        });
-
-        // Navegación entre secciones
-        const navLinks = document.querySelectorAll(".nav-link");
-        const sections = document.querySelectorAll(".page-section");
-
-        // Mostrar solo la sección inicial al cargar
-        sections.forEach((section) => {
-          if (section.id !== "inicio") {
-            section.style.display = "none";
-          }
-        });
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            // Ocultar todas las secciones
-            sections.forEach((section) => {
-              section.style.display = "none";
-            });
-
-            // Mostrar la sección correspondiente
-            const targetId = this.getAttribute("href").substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-              targetSection.style.display = "block";
-            }
-
-            // Cerrar menú hamburguesa si está abierto
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-          });
-        });
-      });
-    </script>
-    <!-- Justo antes de cerrar el </body> -->
-
-    <!-- Supabase JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/supabase-config.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/form-handlers.js"></script>
-    <!-- Añade esto como nuevas secciones -->
-    <section id="login" class="page-section">
-      <h2>Iniciar Sesión</h2>
-      <div class="form-container">
-        <form id="login-form">
-          <div class="form-group">
-            <label for="login-email">Correo electrónico:</label>
-            <input type="email" id="login-email" required />
-          </div>
-          <div class="form-group">
-            <label for="login-password">Contraseña:</label>
-            <input type="password" id="login-password" required />
-          </div>
-          <button type="submit" class="submit-btn">Iniciar Sesión</button>
-          <p class="form-switch">
-            ¿No tienes cuenta?
-            <a href="#register" class="nav-link" data-section="register"
-              >Regístrate aquí</a
-            >
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <section id="register" class="page-section">
-      <h2>Registro de Usuario</h2>
-      <div class="form-container">
-        <form id="register-form">
-          <div class="form-group">
-            <label for="register-nombre">Nombre:</label>
-            <input type="text" id="register-nombre" required />
-          </div>
-          <div class="form-group">
-            <label for="register-apellido">Apellido:</label>
-            <input type="text" id="register-apellido" required />
-          </div>
-          <div class="form-group">
-            <label for="register-email">Correo electrónico:</label>
-            <input type="email" id="register-email" required />
-          </div>
-          <div class="form-group">
-            <label for="register-telefono">Teléfono:</label>
-            <input type="tel" id="register-telefono" />
-          </div>
-          <div class="form-group">
-            <label for="register-password">Contraseña:</label>
-            <input type="password" id="register-password" required />
-          </div>
-          <div class="form-group">
-            <label for="register-confirm-password">Confirmar contraseña:</label>
-            <input type="password" id="register-confirm-password" required />
-          </div>
-          <button type="submit" class="submit-btn">Registrarse</button>
-          <p class="form-switch">
-            ¿Ya tienes cuenta?
-            <a href="#login" class="nav-link" data-section="login"
-              >Inicia sesión aquí</a
-            >
-          </p>
-        </form>
-      </div>
-    </section>
+    <script src="js/top-nav.js"></script>
+    <script src="js/hamburger.js"></script>
   </body>
 </html>
