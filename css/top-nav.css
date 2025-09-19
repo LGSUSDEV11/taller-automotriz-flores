@@ -1,4 +1,6 @@
 #top-nav {
+  display: flex;
+  align-items: center;
   height: 6rem;
   background-color: var(--primary-color);
   position: sticky;

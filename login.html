@@ -5,67 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar Sesión - Taller Automotriz Flores</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/top-nav.css" />
+    <link rel="stylesheet" href="css/hamburger.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="icon" type="image/png" href="img/logo.webp" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
   </head>
   <body>
     <nav id="top-nav">
-      <a href="/">
-        <img id="top-nav-logo" src="img/logo.webp" alt="Logo Taller Flores" />
-      </a>
+      <div class="container">
+        <a href="/">
+          <img id="top-nav-logo" src="img/logo.webp" alt="Logo Taller Flores" />
+        </a>
 
-      <ul id="top-nav-menu">
-        <li class="nav-item">
-          <a href="#inicio" class="nav-link" data-section="inicio">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a href="#cotizacion" class="nav-link" data-section="cotizacion"
-            >Cotización</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#proyectos" class="nav-link" data-section="proyectos"
-            >Proyectos Realizados</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#nosotros" class="nav-link" data-section="nosotros"
-            >Acerca de Nosotros</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#contacto" class="nav-link" data-section="contacto"
-            >Contáctenos</a
-          >
-        </li>
-      </ul>
-      <div class="auth-buttons">
-        <button class="login-btn">Iniciar Sesión</button>
-        <button class="register-btn">Registrarse</button>
-      </div>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+        <ul id="top-nav-menu">
+          <li>
+            <a href="/">Inicio</a>
+          </li>
+          <li>
+            <a href="/cotizacion.html">Cotización</a>
+          </li>
+          <li>
+            <a href="/projects.html">Proyectos</a>
+          </li>
+          <li>
+            <a href="/about.html">Acerca de</a>
+          </li>
+          <li>
+            <a href="/contact.html">Contáctenos</a>
+          </li>
+        </ul>
+
+        <ul id="top-nav-buttons">
+          <li>
+            <a id="login-btn" href="/login.html">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </a>
+          </li>
+          <li>
+            <div
+              id="top-nav-hamburger"
+              class="hamburger"
+              role="button"
+              tabindex="0"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <h1>Iniciar Sesión</h1>
-    <form id="login-form">
-      <div class="form-group">
-        <label for="login-email">Correo electrónico:</label>
-        <input type="email" id="login-email" required />
-      </div>
-      <div class="form-group">
-        <label for="login-password">Contraseña:</label>
-        <input type="password" id="login-password" required />
-      </div>
-      <button type="submit" class="submit-btn">Iniciar Sesión</button>
+    <main class="container">
+      <h1>Iniciar Sesión</h1>
+      <form>
+        <fieldset>
+          <legend class="sr-only">
+            Ingrese los datos de acceso del usuario
+          </legend>
+          <label>
+            <span>Correo electrónico<span class="required">*</span></span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="johndoe@example.com"
+              required
+            />
+          </label>
+          <label>
+            <span>Contraseña<span class="required">*</span></span>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="********"
+              required
+            />
+          </label>
+        </fieldset>
+        <button type="submit" class="submit-btn">Iniciar Sesión</button>
+      </form>
       <p class="form-switch">
         ¿No tienes cuenta?
         <a href="#register" class="nav-link" data-section="register"
           >Regístrate aquí</a
         >
       </p>
-    </form>
+    </main>
+    <script src="js/top-nav.js"></script>
+    <script src="js/hamburger.js"></script>
   </body>
 </html>
 <!-- 
