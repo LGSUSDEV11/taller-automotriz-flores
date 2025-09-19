@@ -54,24 +54,20 @@ button[type="submit"] {
   font-size: 16px;
   font-weight: bold;
   width: 100%;
-  transition: background-color 0.3s;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
-button[type="submit"]:hover {
-  background-color: var(--primary-color);
-}
-
-.form-switch {
+main > p {
   text-align: center;
   margin-top: 15px;
 }
 
-.form-switch a {
-  color: #b51a28;
-  text-decoration: none;
+main > p > a {
   font-weight: bold;
-}
-
-.form-switch a:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }
